@@ -237,6 +237,7 @@ sudo mv ./kubectl /usr/local/bin/kubectl                                        
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64       # 🌐 Downloads Minikube binary | Fetches the local single-node cluster installer tool
 chmod +x minikube                                                                                  # 🔓 Makes minikube executable | Grants execution permissions to the minikube file
 sudo mv minikube /usr/local/bin/                                                                   # 📦 Moves minikube to system path | Relocates the binary globally for execution
+
 # 🔍 Verify Minikube binary: Run 'minikube version' to confirm successful installation.
  # 📦 EXAMPLE 1: Basic Pod with Custom Command & Restart Policy
 apiVersion: v1                     # ⚙️ API version for core objects
@@ -250,6 +251,7 @@ spec:                              # 📋 Specification of desired behavior
       # 💬 Infinite loop printing a message every 5 seconds:
       command: ["/bin/bash", "-c", "while true; do echo Hello-Bhupinder; sleep 5 ; done"]
   restartPolicy: Never             # 🔄 Do not restart container if it exits (Defaults to Always)
+
  # 📦📦 EXAMPLE 2: Multi-Container Pod Environment
 # 💡 Multiple containers run inside the SAME pod and share network/storage.
 apiVersion: v1
@@ -261,10 +263,10 @@ spec:
     - name: c00                    # 🐳 Container 1
       image: ubuntu                # 🖼️ Base image
       command: ["/bin/bash", "-c", "while true; do echo Technical-Guftgu; sleep 5 ; done"]
-      
     - name: c01                    # 🐳 Container 2 (runs alongside Container 1)
       image: ubuntu                # 🖼️ Base image
       command: ["/bin/bash", "-c", "while true; do echo Hello-Bhupinder; sleep 5 ; done"]
+
  # 🔑 EXAMPLE 3: Pod with Environment Variables
 apiVersion: v1
 kind: Pod
@@ -278,6 +280,7 @@ spec:
       env:                         # 🔑 Environment variables list
         - name: MYNAME             # 📌 Variable key/name
           value: BHUPINDER         # 💬 Variable value
+          
  # 🌐 EXAMPLE 4: Pod with Exposed Ports
 apiVersion: v1
 kind: Pod

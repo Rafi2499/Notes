@@ -10,7 +10,7 @@
 |    * Windows Git Bash & Docker# 🐳 [Docker Deployment]   MSYS path conversion, volumes, and admin logs[cite: 9]        |
 +------------------------------------------------------------------------------------------------------------------------+
 
-💡 WHAT IS JENLINS:
+💡 WHAT IS JENKINS:
 Instead of developers manually compiling code, testing it, and uploading it to a live server every day, Jenkins sits in the background and runs these steps automatically.
 An OPEN-SOURCE AUTOMATION SERVER (a "robot manager") that automatically builds, tests, and deploys your code whenever changes are made.
 

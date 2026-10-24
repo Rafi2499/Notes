@@ -37,7 +37,28 @@ OS Restrictions: You cannot run Windows-only software directly on a Linux host.
 Complex at Scale: Managing hundreds of containers requires heavy extra tools like Kubernetes.
 
 ─────────────────────────────────────────────────────────────────────────────────────────
+===================================================================================
+                       VIRTUAL MACHINE vs. DOCKER CONTAINERIZATION
+===================================================================================
 
+       [ VIRTUAL MACHINE ]                           [ DOCKER CONTAINERIZATION ]
+
+  +-----------------+  +-----------------+     +-----------------+ +-----------------+
+  |      VM 1       |  |      VM 2       |     |   Container 1   | |   Container 2   |
+  |                 |  |                 |     |                 | |                 |
+  |      APP 1      |  |      APP 2      |     |      APP 1      | |      APP 2      |
+  |                 |  |                 |     |                 | |                 |
+  |     Bin/Lib     |  |     Bin/Lib     |     |     Bin/Lib     | |     Bin/Lib     |
+  +-----------------+  +-----------------+     +-----------------+ +-----------------+
+  | Guest Operating |  | Guest Operating |     |             Docker Engine             |
+  |     System      |  |     System      |     +---------------------------------------+
+  +-----------------+  +-----------------+     |         Host Operating System         |
+  |                   Hypervisor         |     +---------------------------------------+
+  +--------------------------------------+     |    Infrastructure (Physical Server)   |
+  |    Infrastructure (Physical Server)  |     +---------------------------------------+
+  +--------------------------------------+
+
+─────────────────────────────────────────────────────────────────────────────────────────
 Comparison MatrixFeature📦 ------>
 [ 📦 DOCKER CONTAINERS ]
   • Virtualization : OS-level (Kernel sharing)
@@ -59,28 +80,6 @@ Comparison MatrixFeature📦 ------>
   • Boot Speed     : Minutes 🐢
   • Memory Usage   : High (GBs of RAM)
   • Where it Runs  : In Amazon's Cloud Data Centers
-
-─────────────────────────────────────────────────────────────────────────────────────────
-===================================================================================
-                       VIRTUAL MACHINE vs. DOCKER CONTAINERIZATION
-===================================================================================
-
-       [ VIRTUAL MACHINE ]                           [ DOCKER CONTAINERIZATION ]
-
-  +-----------------+  +-----------------+     +-----------------+ +-----------------+
-  |      VM 1       |  |      VM 2       |     |   Container 1   | |   Container 2   |
-  |                 |  |                 |     |                 | |                 |
-  |      APP 1      |  |      APP 2      |     |      APP 1      | |      APP 2      |
-  |                 |  |                 |     |                 | |                 |
-  |     Bin/Lib     |  |     Bin/Lib     |     |     Bin/Lib     | |     Bin/Lib     |
-  +-----------------+  +-----------------+     +-----------------+ +-----------------+
-  | Guest Operating |  | Guest Operating |     |             Docker Engine             |
-  |     System      |  |     System      |     +---------------------------------------+
-  +-----------------+  +-----------------+     |         Host Operating System         |
-  |                   Hypervisor         |     +---------------------------------------+
-  +--------------------------------------+     |    Infrastructure (Physical Server)   |
-  |    Infrastructure (Physical Server)  |     +---------------------------------------+
-  +--------------------------------------+
 
 ──────────────────────────────────────────────────────────────────────────────────────────
 How to Remember Everything (The Apartment vs. House) ----->

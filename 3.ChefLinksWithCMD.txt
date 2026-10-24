@@ -31,9 +31,9 @@ Chef is a open-source configuration management and infrastructure automation too
 Chef Architecture :
                    -----------------
 
-+-----------------+             +--------------+             +--------------+
++-----------------+             +--------------+                  +--------------+
 |   Workstation   | -- Knife -> |  Chef Server | - Chef Client<-> |    Node 1    |
-+-----------------+             +--------------+             +--------------+
++-----------------+             +--------------+                  +--------------+
                                        |
                                   Chef Client
                                        |

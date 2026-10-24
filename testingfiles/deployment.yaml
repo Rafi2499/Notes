@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: os-deployment          # Unique name for our Kubernetes deployment
+spec:
+  replicas: 3                  # Scaled to 5 replicas
+  selector:
+    matchLabels:
+      app: os-app              # Match key used by deployment selector
+  template:
+    metadata:
+      labels:
+        app: os-app            # Label attached to every pod generated
+    spec:
+      containers:
+      - name: ubuntu-container
+        image: fedora:latest   # Container 1: Fedora
+        command: ["sh", "-c", "while true; do echo Fedora running...; sleep 5; done"]
+      - name: fedora-container
+        image: fedora:latest   # Container 1: Fedora
+        command: ["sh", "-c", "while true; do echo Fedora running...; sleep 5; done"]
+      - name: alpine-container
+        image: fedora:latest   # Container 1: Fedora
+        command: ["sh", "-c", "while true; do echo Fedora running...; sleep 5; done"]

@@ -2,10 +2,10 @@ Cisco Certified Network Associate
 
                                   [ HARDWARE, FIRMWARE, & SOFTWARE LAYER STACK ]
 
-  +-------------------+   +-------------------+    +-------------------+   +-------------------+
-  |  App Software 1   |   |  App Software 2   |    |  System Software  |   |  System Software  |
-  |  (e.g., Browser)  |   |   (e.g., Word)    |    |   (OS, Drivers)   |   | (Manage Hardware) |
-  +-------------------+   +-------------------+    +-------------------+   +-------------------+
+  +-------------------+   +-------------------+    +-------------------+   +------------------+
+  |  App Software 1   |   |  App Software 2   |    |  System Software  |   |  System Software |
+  |  (e.g., Browser)  |   |   (e.g., Word)    |    |   (OS, Drivers)   |   | (Manage Hardware)|
+  +-------------------+   +-------------------+    +-------------------+   +------------------+
   |                                        Software Layer                                     |
   +-------------------------------------------------------------------------------------------+
   |                                          Firmware                                         |
@@ -177,7 +177,7 @@ Cisco Certified Network Associate
   +----------------------------------------------------+       +----------------------------------------------------+
                              ▼                                                            ▲
   +----------------------------------------------------+       +----------------------------------------------------+
-  | ⚡ LAYER 1: PHYSICAL                                |       | ⚡ LAYER 1: PHYSICAL                               |
+  | ⚡ LAYER 1: PHYSICAL                                |       | ⚡ LAYER 1: PHYSICAL                                |
   | • Data Unit: Bits (0s and 1s)                      |       | • Data Unit: Bits (0s and 1s)                      |
   | • Story: Converts everything into raw electrical   |  ==>  | • Story: Receives electrical pulses / light waves  |
   |   pulses or light waves across physical cables.    |       |   off the cable and converts them back to bits.    |
@@ -185,3 +185,4 @@ Cisco Certified Network Associate
   +----------------------------------------------------+       +----------------------------------------------------+
                             ▲                                                             ▲
                             └─────────── PHYSICAL CABLE TRANSMISSION MEDIUM ──────────────┘
+
